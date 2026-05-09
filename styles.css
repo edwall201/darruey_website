@@ -299,6 +299,11 @@ h3 {
   color: var(--blue);
 }
 
+a.contact-name {
+  font-size: 22px;
+  color: var(--ink);
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
