@@ -208,7 +208,6 @@ h3 {
 
 .service-card {
   padding: 28px;
-  border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--white);
   box-shadow: 0 10px 28px rgba(18, 34, 71, 0.06);
@@ -258,7 +257,6 @@ h3 {
 
 .equipment-content article {
   padding: 24px;
-  border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
 }
@@ -276,24 +274,36 @@ h3 {
   object-fit: cover;
 }
 
-.feature-band {
+.product-gallery {
   display: grid;
-  grid-template-columns: minmax(260px, 0.5fr) minmax(0, 1fr);
-  gap: 36px;
-  align-items: center;
-  padding: 72px 6vw;
-  background: var(--navy);
-  color: var(--white);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
 }
 
-.feature-band .eyebrow {
-  color: var(--cyan);
+.product-card {
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: 0 10px 28px rgba(18, 34, 71, 0.06);
+}
+
+.product-card img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.product-card figcaption {
+  padding: 18px 20px;
+  font-weight: 800;
+  color: var(--ink);
 }
 
 .application-list {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
+  margin-bottom: 36px;
 }
 
 .application-list span {
@@ -301,9 +311,10 @@ h3 {
   place-items: center;
   min-height: 86px;
   padding: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: 0 10px 28px rgba(18, 34, 71, 0.06);
   font-size: 18px;
   font-weight: 800;
   text-align: center;
@@ -352,7 +363,6 @@ h3 {
 @media (max-width: 980px) {
   .hero,
   .equipment-layout,
-  .feature-band,
   .contact-section {
     grid-template-columns: 1fr;
   }
@@ -363,7 +373,8 @@ h3 {
 
   .service-grid,
   .application-list,
-  .equipment-gallery {
+  .equipment-gallery,
+  .product-gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -387,7 +398,6 @@ h3 {
   .hero,
   .section,
   .equipment-section,
-  .feature-band,
   .contact-section {
     padding-right: 20px;
     padding-left: 20px;
@@ -414,7 +424,8 @@ h3 {
 
   .service-grid,
   .application-list,
-  .equipment-gallery {
+  .equipment-gallery,
+  .product-gallery {
     grid-template-columns: 1fr;
   }
 
