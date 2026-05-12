@@ -86,8 +86,8 @@ img {
   color: var(--blue);
 }
 
-.mobile-nav {
-  display: none;
+nav.mobile-nav {
+  display: none !important;
 }
 
 .hero {
@@ -410,12 +410,12 @@ h3 {
     font-size: 15px;
   }
 
-  .desktop-nav {
-    display: none;
+  nav.desktop-nav {
+    display: none !important;
   }
 
-  .mobile-nav {
-    display: flex;
+  nav.mobile-nav {
+    display: flex !important;
   }
 
   .hero,
