@@ -394,6 +394,10 @@ h3 {
 }
 
 @media (max-width: 680px) {
+  .brand {
+    display: none;
+  }
+
   .site-header {
     position: static;
     flex-direction: column;
