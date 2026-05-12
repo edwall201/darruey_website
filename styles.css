@@ -85,7 +85,7 @@ img {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
   gap: 48px;
   align-items: center;
   min-height: calc(100vh - 72px);
@@ -178,10 +178,14 @@ h3 {
   box-shadow: var(--shadow);
 }
 
+.hero-visual {
+  max-width: 420px;
+  justify-self: center;
+}
+
 .hero-visual img {
-  aspect-ratio: 16 / 11;
-  height: 100%;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 
 .section,
