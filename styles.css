@@ -17,6 +17,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -25,6 +26,7 @@ body {
   color: var(--ink);
   font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
@@ -83,6 +85,10 @@ img {
   color: var(--blue);
 }
 
+.mobile-nav {
+  display: none;
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
@@ -117,13 +123,14 @@ p {
 
 h1 {
   margin-bottom: 18px;
-  font-size: clamp(44px, 7vw, 86px);
+  font-size: clamp(36px, 9vw, 86px);
   line-height: 1.05;
+  white-space: nowrap;
 }
 
 h2 {
   margin-bottom: 14px;
-  font-size: clamp(28px, 4vw, 44px);
+  font-size: clamp(24px, 6vw, 44px);
   line-height: 1.15;
 }
 
@@ -180,6 +187,7 @@ h3 {
 
 .hero-visual {
   max-width: 420px;
+  width: 100%;
   justify-self: center;
 }
 
@@ -347,6 +355,7 @@ h3 {
 
 .contact-card a {
   color: var(--blue);
+  word-break: break-word;
 }
 
 .contact-name {
@@ -386,17 +395,26 @@ h3 {
 @media (max-width: 680px) {
   .site-header {
     position: static;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     gap: 16px;
     min-height: auto;
     padding: 18px 20px;
   }
 
   .nav-links {
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 10px 16px;
-    font-size: 14px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+    font-size: 15px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
   }
 
   .hero,
